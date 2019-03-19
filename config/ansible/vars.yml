@@ -26,7 +26,7 @@ logstash_ip: "127.0.0.1"
 
 # apolloclark/heartbeat
 heartbeat:
-  version: "6.4.2"
+  version: "6.6.2"
   monitors:
     http:
       schedule: "'@every 5s'"
@@ -39,7 +39,7 @@ heartbeat:
 
 # apolloclark/metricbeat
 metricbeat:
-  version: "6.4.2"
+  version: "6.6.2"
   output:
     kafka:
       enabled: true
@@ -48,7 +48,7 @@ metricbeat:
 
 # apolloclark/packetbeat
 packetbeat:
-  version: "6.4.2"
+  version: "6.6.2"
   protocols:
     http:
       enabled: true
@@ -61,7 +61,7 @@ packetbeat:
 
 # apolloclark/filebeat
 filebeat:
-  version: "6.4.2"
+  version: "6.6.2"
   output:
     kafka:
       enabled: true
@@ -70,7 +70,7 @@ filebeat:
 
 # apolloclark/auditbeat
 auditbeat:
-  version: "6.4.2"
+  version: "6.6.2"
   output:
     kafka:
       enabled: true
@@ -79,7 +79,7 @@ auditbeat:
 
 # apolloclark/logstash
 logstash:
-  version: "6.4.2"
+  version: "6.6.2"
   input_conf: "{{ playbook_dir }}/files/10-beats-input.conf"
   filter_conf: "{{ playbook_dir }}/files/20-syslog-filter.conf"
   output_conf: "{{ playbook_dir }}/files/30-elasticsearch-output.conf"

@@ -3,7 +3,7 @@ require 'spec_helper'
 # Define installed packages
 Packages = {
   'logstash' => {
-    version: '1:6.4.2-1'
+    version: '1:6.6.2-1'
   },
 }
 

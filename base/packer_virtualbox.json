@@ -7,7 +7,7 @@
     "headless": "true",
     "memory": "4096",
     "hostname": "vagrant",
-    "source_path": "../packer-aws-java/output/vbox/ubuntu1604-java.ovf",
+    "source_path": "../packer-openjdk/output/vbox/ubuntu1604-java.ovf",
     "ssh_password": "vagrant",
     "ssh_username": "vagrant",
     "vagrantfile_template": "vagrantfile.tpl",

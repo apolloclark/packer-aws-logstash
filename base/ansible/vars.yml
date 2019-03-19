@@ -20,5 +20,5 @@ kibana_ip: "127.0.0.1"
       
 # apolloclark/logstash
 logstash:
-  version: "6.4.2"
+  version: "6.6.2"
   install_only: true
