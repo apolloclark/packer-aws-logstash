@@ -11,12 +11,4 @@
     - "vars.yml"
     - "vars_ssm.yml"
   roles:
-    - geerlingguy.firewall
-    - geerlingguy.java
     - apolloclark.logstash
-    - apolloclark.auditbeat
-    - apolloclark.filebeat
-    - apolloclark.packetbeat
-    - apolloclark.metricbeat
-    - apolloclark.heartbeat
-    - apolloclark.osquery

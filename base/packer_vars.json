@@ -1,0 +1,3 @@
+{
+    "docker_changes":  "WORKDIR /usr/share/logstash,USER logstash,ENTRYPOINT [\"/usr/local/bin/docker-entrypoint\"],CMD [\"\"],ENV PATH=/usr/share/logstash/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin,ENV LANG=C.UTF-8,ENV LC_ALL=en_US.UTF-8,ENV ELASTIC_CONTAINER=true"
+}

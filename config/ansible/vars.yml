@@ -2,84 +2,14 @@
 ---
 hostname: all
 
-# geerlingguy/firewall
-firewall_allowed_tcp_ports:
-  - "22"
-  - "25"
-  - "80"
-  - "5044" # Logstash
-  - "9092" # Kafka
-  - "9200" # Elasticsearch
-  - "9300" # Elasticsearch
-
-# geerlingguy/java
-java_packages:
-  - openjdk-8-jre
-
-
-
 es_ip: "127.0.0.1"
 kafka_ip: "127.0.0.1"
 logstash_ip: "127.0.0.1"
+kibana_ip: "127.0.0.1"
 
 
-
-# apolloclark/heartbeat
-heartbeat:
-  version: "6.6.2"
-  monitors:
-    http:
-      schedule: "'@every 5s'"
-      urls: '["http://localhost:80", "http://localhost:5601"]'
-  output:
-    kafka:
-      enabled: true
-      hosts:
-       - "{{ kafka_ip }}:9092"
-
-# apolloclark/metricbeat
-metricbeat:
-  version: "6.6.2"
-  output:
-    kafka:
-      enabled: true
-      hosts:
-       - "{{ kafka_ip }}:9092"
-
-# apolloclark/packetbeat
-packetbeat:
-  version: "6.6.2"
-  protocols:
-    http:
-      enabled: true
-      ports: '[80,5601,9200]'
-  output:
-    kafka:
-      enabled: true
-      hosts:
-       - "{{ kafka_ip }}:9092"
-
-# apolloclark/filebeat
-filebeat:
-  version: "6.6.2"
-  output:
-    kafka:
-      enabled: true
-      hosts:
-       - "{{ kafka_ip }}:9092"
-
-# apolloclark/auditbeat
-auditbeat:
-  version: "6.6.2"
-  output:
-    kafka:
-      enabled: true
-      hosts:
-       - "{{ kafka_ip }}:9092"
-
+      
 # apolloclark/logstash
 logstash:
-  version: "6.6.2"
-  input_conf: "{{ playbook_dir }}/files/10-beats-input.conf"
-  filter_conf: "{{ playbook_dir }}/files/20-syslog-filter.conf"
-  output_conf: "{{ playbook_dir }}/files/30-elasticsearch-output.conf"
+  version: "7.3.0"
+  install_only: true
