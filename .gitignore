@@ -1,6 +1,9 @@
 .project
+.pyproject
+.pydevproject
 .vagrant
 .rspec
+.gradle
 manifest.json
 manifest.json.lock
 vagrant.json
