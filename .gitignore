@@ -1,7 +1,6 @@
 .project
-.pyproject
-.pydevproject
 .vagrant
+.gradle
 .rspec
 manifest.json
 manifest.json.lock
@@ -9,7 +8,6 @@ vagrant.json
 Gemfile.lock
 composer.lock
 
-**/.gradle
 **/ansible/roles/*
 **/playbook.retry
 **/box/*
