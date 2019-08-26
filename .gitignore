@@ -3,7 +3,6 @@
 .pydevproject
 .vagrant
 .rspec
-.gradle
 manifest.json
 manifest.json.lock
 vagrant.json
@@ -15,3 +14,4 @@ composer.lock
 **/box/*
 **/output*/*
 **/packer_cache/*
+**/.gradle
